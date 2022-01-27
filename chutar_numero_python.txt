@@ -1,0 +1,28 @@
+import random
+
+x = random.randint(10,100)
+
+def chutar_numero():
+
+
+    num = int(input("chute um numero"))
+
+    while num != x:
+
+          if num > x:
+             print("chutou alto")
+             return chutar_numero()
+
+
+          elif num < x:
+             print("chutou baixo")
+             return chutar_numero()
+
+
+
+    else:
+        print("mizeravi acerto")
+        
+        
+
+chutar_numero()

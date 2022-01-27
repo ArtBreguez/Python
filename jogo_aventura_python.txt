@@ -1,0 +1,100 @@
+def jogo_aventura():
+
+    jogar = str(input("gostaria de começar o jogo? [sim/não]"))
+
+    while jogar == "sim":
+        print("gostaria de pegar o cajado ou machado? [digite cajado ou machado]")
+        passo_1 = str(input())
+        if passo_1 == "cajado":
+            while passo_1 == "cajado":
+              print("agora você é um mago! Deseja ir lutar contra o dragão ou matar o goblim? [digite dragão ou goblim]")
+              passo_2 = str(input())
+              if passo_2 == "dragão":
+                 while passo_2 == "dragão":
+                    print("parabés fera, você morreu cedo!")
+
+                    print("gostaria de tentar dnv? [sim ou não]")
+                    dnv = str(input())
+                    if dnv == "sim":
+                        return jogo_aventura()
+
+              elif passo_2 == "goblim":
+                while passo_2 == "goblim":
+
+                    print("parabéns, vc derrotou o safado! Gostaria de percorrer pelas floresta escura ou continuar no territorio dos goblins? [digite floresta ou goblins]")
+                    passo_3 = str(input())
+                    if passo_3 == "floresta":
+                        while passo_3 == "floresta":
+                            print("uuhhhhhhh! vc chegou a floresta escura, deseja acampar até amanhecer ou continuar prosseguindo? Sim, você está perdido! [digiter acampar ou prosseguir]")
+                            passo_4 = str(input())
+                            if passo_4 == "acampar":
+                                print("parabens! você foi devorado por uma criatura das sombras enquanto dormia")
+                                print("gostaria de tentar dnv? [sim ou não]")
+                                dnv = str(input())
+                                if dnv == "sim":
+                                    return jogo_aventura()
+                            elif passo_4 == "prosseguir":
+                                print("aeeeeeeeeeeeee carai! vc saiu vivo agr é só viver la vida (CABO O JOGO)")
+                                print("gostaria de tentar dnv? [sim ou não]")
+                                dnv = str(input())
+                                if dnv == "sim":
+                                    return jogo_aventura()
+
+                            else:
+                                print("digite uma resposta valida")
+                    elif passo_3 == "goblins":
+                        print("achou que ia matar um goblim e ficar andando de boas no territorio deles? M-O-R-R-E-U!")
+                        print("gostaria de tentar dnv? [sim ou não]")
+                        dnv = str(input())
+                        if dnv == "sim":
+                            return jogo_aventura()
+
+
+                    else:
+                        print("digite uma resposta valida")
+              else:
+                print("digite uma resposta valida")
+
+
+
+
+
+        elif passo_1 == "machado":
+            while passo_1 == "machado":
+                print("agora você é um lutador... ou lenhador? o que deseja fazer? [digite lutar ou cortar lenha]")
+                passo_5 = str(input())
+                if passo_5 == "lutar":
+                    while passo_5 == "lutar":
+                        print("você está com sede de sangue! parabens pela carnificina na florestinha!")
+                        print("deseja continuar com sua baguncinha ou quer lutar contra o dragão agora? [digite baguncinha ou dragão]")
+                        passo_6 = str(input())
+                        if passo_6 == "baguncinha":
+                            print("parabens mongolão, vc foi morto por um javali!")
+                            print("gostaria de tentar dnv? [sim ou não]")
+                            dnv = str(input())
+                            if dnv == "sim":
+                                return jogo_aventura()
+
+                        elif passo_6 == "dragão":
+                            print("é... vc matou o dragão, salvou a princesa, deu o c* e zerou o jogo!")
+                            print("gostaria de tentar dnv? [sim ou não]")
+                            dnv = str(input())
+                            if dnv == "sim":
+                                return jogo_aventura()
+
+                        else:
+                            print("digite uma opção valida")
+                elif passo_5 == "cortar lenha":
+                    print("madeiraaaaaaaaaaaaaaaaaaaaaaaaaaaa!!!! morreu XD")
+                    print("gostaria de tentar dnv? [sim ou não]")
+                    dnv = str(input())
+                    if dnv == "sim":
+                        return jogo_aventura()
+
+                else:
+                    print("digite uma opção valida")
+        else:
+            print("digite uma opção valida")
+
+
+jogo_aventura()

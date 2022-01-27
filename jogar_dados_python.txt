@@ -1,0 +1,28 @@
+import random
+
+
+def jogar_dados():
+    var = str(input("Você gostaria de jogar dados?"))
+
+
+
+    if var == "sim":
+         x = random.randint(1, 6)
+         print("O número sorteado foi", x)
+         var = str(input("deseja jogar denovo?"))
+         while var == "sim":
+             x = random.randint(1, 6)
+             print("O número sorteado foi", x)
+             var = str(input("deseja jogar denovo?"))
+
+
+
+    elif var == "não":
+         print("okay fera")
+
+
+    else:
+
+        print("digite sim ou não")
+
+        return jogar_dados()

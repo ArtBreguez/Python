@@ -1,0 +1,56 @@
+import random
+
+def forca():
+
+    alfabeto = list("abcdefghijklmnopqrstuvxwyz")
+    lista = []
+    tentativas = []
+    print("BEM VINDO A FORCA! DIGITE 6 PALAVRAS PARA COMEÇAR\n")
+    nome1 = str(input())
+    nome2 = str(input())
+    nome3 = str(input())
+    nome4 = str(input())
+    nome5 = str(input())
+    nome6 = str(input())
+    lista.extend([nome1,nome2,nome3,nome4,nome5,nome6])
+    palavra_secreta = random.choice(lista)
+    chance = 6
+
+    while True:
+
+        print(tentativas)
+        print("chances: ", chance)
+
+        for letra in palavra_secreta:
+            if letra in tentativas:
+                print(letra, end=' ')
+            else:
+                print('_', end=' ')
+
+        palpite = input("Digite seu palpite ou 'SAIR' para sair do programa \n").lower()
+
+        if palpite == "sair":
+            break
+        elif palpite not in alfabeto:
+            print("Isso não é uma letra")
+            continue
+        elif palpite in tentativas:
+            print("Você já digitou essa letra")
+            continue
+
+        tentativas.append(palpite)
+
+        if palpite in palavra_secreta:
+            print("Mizeravi acerto!")
+        else:
+            print("Erouuuuuuuu")
+            chance-=1
+        if chance == 0:
+            print("perdeu!!!!!!")
+            break
+        elif set(palavra_secreta).issubset(set(tentativas)):
+            print("conseguiu!")
+            break
+
+forca()
+

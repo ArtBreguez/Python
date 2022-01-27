@@ -1,0 +1,18 @@
+import random
+
+lista = ['não sei','pergunte mais tarde','você está com sorte','calma amigo!','só vai filhão','melhor não fi','se pá é certo','se pá é errado','se decide ai carai']
+
+def resposta_aleatoria():
+    
+    #while True é loop infinito
+
+    while True:
+
+         pergunta = str(input("digite uma pergunta"))
+
+         resposta = random.choice(lista)
+
+         print(resposta)
+        
+
+resposta_aleatoria()
